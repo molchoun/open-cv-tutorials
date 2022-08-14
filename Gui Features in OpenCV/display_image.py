@@ -9,4 +9,4 @@ k = cv.waitKey(0)
 
 # if 's' key is pressed on keyboard save displayed image in current directory
 if k == ord("s"):
-    cv.imwrite("./Gui Features in OpenCVassets/starry_night.jpg", img)
+    cv.imwrite("./Gui Features in OpenCV/assets/starry_night.jpg", img)
