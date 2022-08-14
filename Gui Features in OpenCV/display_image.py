@@ -7,6 +7,6 @@ if img is None:
 cv.imshow("Display window", img)
 k = cv.waitKey(0)
 
-# if 's' key is pressed on keyboard save displayed image in current directory
+# if 's' key is pressed on keyboard save displayed image in assets directory
 if k == ord("s"):
     cv.imwrite("./Gui Features in OpenCV/assets/starry_night.jpg", img)
