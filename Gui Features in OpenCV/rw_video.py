@@ -1,8 +1,9 @@
 import cv2 as cv
 
-cap = cv.VideoCapture('vtest.avi')
-fourcc = cv.VideoWriter_fourcc(*'DIVX')
-out = cv.VideoWriter('output.avi', fourcc, 24.0, (640, 480))
+cap = cv.VideoCapture('assets/vtest.avi')
+fourcc = cv.VideoWriter_fourcc(*'MJPG')
+size = (576, 768)
+out = cv.VideoWriter('assets/output.avi', fourcc, 24.0, size)
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -12,9 +13,8 @@ while cap.isOpened():
         break
 
     frame = cv.flip(frame, 0)
-    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-    out.write(gray)
-    cv.imshow('frame', gray)
+    out.write(frame)
+    cv.imshow('frame', frame)
 
     if cv.waitKey(1) == ord('q'):
         break
