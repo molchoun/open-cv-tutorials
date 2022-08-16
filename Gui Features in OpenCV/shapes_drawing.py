@@ -30,6 +30,7 @@ cv.polylines(img,[pts],False,(0,255,255))
 font = cv.FONT_HERSHEY_COMPLEX
 cv.putText(img,'OpenCV',(10,475), font, 3,(0,0,0),5,cv.LINE_AA)
 
+# Show the image
 cv.imshow("display image", img)
 k = cv.waitKey(0)
 
